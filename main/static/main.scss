@@ -1,0 +1,198 @@
+
+// @mixin yup($direction, $background) {
+//     sheight: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     flex-direction: $direction;
+//     background: $background;
+// }
+
+// @mixin yessir($size, $colour) {
+//     display: flex;
+//     justify-content: center;
+//     font-size: $size;
+//     background-color: $colour;
+// }
+
+// .test1 {
+
+//     @include yup(column, red);
+
+//     .button {
+//         background-color: $primary-colour;
+//     }
+
+//     .button1 {
+//         background-color: $primary-colour;
+//     }
+
+//     .button2 {
+//         background-color: $secondary-color;
+//     }
+// }
+
+// .welp {
+//     @include yessir(5rem, red);
+// }
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+  }
+
+@mixin block() {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin static() {
+    position: absolute;
+    top: 23%;
+}
+
+
+@mixin button1($color, $size) {
+    width: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 2.4rem;
+    background: #f5f5f5;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    font-size: $size;
+    color: $color;
+}
+
+.container {
+    padding-top: 12rem;
+    @include block();
+    width: 100%;
+    flex-direction: column;
+
+    .logo {
+        display: flex;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .logo-text {
+            margin-left: 21rem;
+            margin-top: -2.4rem;
+            h1 {
+                font-size: 1.5rem;
+                color: #2f81da; 
+            }
+        }
+    
+        img {
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+    .search-block {
+       
+        padding-top: 2rem;
+
+        .searchBar {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+          }
+          
+          #searchQueryInput {
+            width: 40rem;
+            height: 2.4rem;
+            outline: none;
+            border: solid 1px #dcdcdc;
+            border-radius: 1.625rem;
+            padding-left: 1rem;
+            font-size: 1rem;
+          }
+          
+          #searchQuerySubmit {
+            @include button1(#3e3e3e, 1rem);
+          }
+
+          #searchQuerySubmitAdvanced {
+            @include button1(#ffffff, 1rem);
+            background-color: #2b7cff;
+          }
+
+        
+          #searchQuerySubmit:hover {
+            cursor: pointer;
+          }
+
+        .searchButtons {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding-top: 1rem;
+            gap: 1rem;
+          }
+
+          .searchButtons1 {
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            margin-left: 20rem;
+            padding-top: 1rem;
+            gap: 1rem;
+          
+          }
+    }
+
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    gap: 62.3rem;
+    padding-bottom: 1rem;
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    
+}
+
+.form1 {
+    display: flex; 
+    padding-bottom: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+
+    .form1-text  {
+        width: 24rem;
+    }
+    
+    .form1-text1 {
+        width: 24rem;
+        margin-left: 10rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+}
+
+
+
+
